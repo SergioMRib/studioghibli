@@ -20,20 +20,22 @@
     <h1>The studio ghibli movies</h1>
     <div>
         <div class="input-group mb-3">
-
-            <input id="search" type="text">
-            <select id="selection" class="form-select">
-                <option value="films" selected>Titles</option>
-                <option value="people">People</option>
-                <option value="locations">Locations</option>
-                <option value="species">Species</option>
-                <option value="vehicles">Vehicles</option>
-            </select>
+            <input id="search-query" type="text">
+            <button id="search" class="btn btn-success">Search</button>
+            <!-- <select id="selection" class="form-select">
+                        <option value="films" selected>Titles</option>
+                        <option value="people">People</option>
+                        <option value="locations">Locations</option>
+                        <option value="species">Species</option>
+                        <option value="vehicles">Vehicles</option>
+                    </select> -->
         </div>
     </div>
+
     <main>
-        <div id="container" class="row row-cols-1 row-cols-md-4 g-2"></div>
+        <div id="container" class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-2"></div>
     </main>
+
     <button id="load-more" class="btn btn-primary">Load more</button>
 </body>
 

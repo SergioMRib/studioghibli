@@ -17,3 +17,9 @@ main {
     justify-content: center;   
     width: 100%;
 }
+
+.description {
+    display: flex;
+    height: 100px;
+    overflow-y: scroll;
+}
