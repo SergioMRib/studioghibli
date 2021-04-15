@@ -3,12 +3,12 @@ define(function(){
     var internals = {};
     var externals = {};
 
-    internals.fetchMovieList = function(){
-        return fetch('https://ghibliapi.herokuapp.com/films?limit=3');
+    internals.fetchMovieList = function(category){
+        return fetch(`https://ghibliapi.herokuapp.com/${category}?limit=250`);
     }
 
-    externals.getList = function(){
-        return internals.fetchMovieList();
+    externals.getList = function(category){
+        return internals.fetchMovieList(category);
     }
 
     return externals;

@@ -1,11 +1,9 @@
 define( function() {
 
+    var internals = {};
     var externals = {};
 
-    externals.show = function(movies) {
-        console.log(movies)
-
-        var container = $('#container').empty();
+    internals.load = function(movies, container){
 
         for(i = 0; i < movies.length; i++){
             var movie = movies[i];
@@ -21,6 +19,28 @@ define( function() {
             
             container.append(thisCard);
         }
+
+    }
+
+    externals.more = function(movies){
+
+        var container = $('#container');
+
+        internals.load(movies, container);
+
+    }
+
+
+    
+
+    externals.show = function(movies, loadMore) {
+        console.log(movies)
+
+        var container = $('#container').empty();
+        internals.load(movies, container);
+     
+        $('#load-more').click(loadMore);
+
     }
 
     return externals;
