@@ -16,10 +16,10 @@ define( function() {
             //console.log(movie.title);
 
             var thisCard = $('<div>').attr('class', 'col-sm-6')
-                .append($('<div>').attr('id', movie.id).attr('class', 'card border-primary')
-                    .append($('<div>').text(movie.release_date).attr('class', 'card-header'))
+                .append($('<div>').attr('id', movie.id).attr('class', 'card ')
                     .append($('<div>').attr('class', 'card-body')
-                        .append($('<h5>').attr('class', 'card-title').text(movie.title))
+                        .append($('<a>').attr('href', movie.url)
+                            .append($('<h5>').attr('class', 'card-title text-white bg-dark').text(movie.title)))
                         .append($('<p>').attr('class', 'card-text').text(movie.original_title))
                         .append($('<p>').attr('class', 'card-text description').text(movie.description))));
 
